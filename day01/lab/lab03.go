@@ -10,9 +10,9 @@ func main() {
 	println("part 1:", sum)
 
 	arr := []int {10, 19, 21, 39, 309, 431, 643, 942, 1209, 7981, 8888, 9910}
+	// sum = part2Array(arr)
 	m := initializeMap(arr)
-	// sum = part2a(arr)
-	sum = part2b(m)
+	sum = part2Map(m)
 	println("part 2:", sum)
 
 	input := "+5 -1 +9 +5 -67 +5 -3 +2 -4 +6 +8 -13 +2 -4 +6 +18 -3 +2 -4 +6 +88 +15 -1 +9 +5 -67 +45 -3 +2 -4 +36 +8 -13 +2 -4 +6 +18 -3 +2 -74 +11 +109"
@@ -38,7 +38,7 @@ func part1() int {
 	return sum
 }
 
-func part2a(arr []int) int {
+func part2Array(arr []int) int {
 	sum := 0
 	for i := 1; i <= 10001; i++ {
 		if !inArray(i, arr) {
@@ -49,7 +49,7 @@ func part2a(arr []int) int {
 	return avg
 }
 
-func part2b(m map[int]bool) int {
+func part2Map(m map[int]bool) int {
 	sum := 0
 	for i := 1; i <= 10001; i++ {
 		// println(i, m[i])
