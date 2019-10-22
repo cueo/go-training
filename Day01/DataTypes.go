@@ -6,6 +6,9 @@ type Currency float64
 const PI float64 = 3.14
 
 func main() {
+	var x = 10 //Type Inference
+	fmt.Printf("%T\n", x)
+	//var x int = 10
 
 	var dollar Currency = 71.15
 	fmt.Printf("$%v \n", dollar)
