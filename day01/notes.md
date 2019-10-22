@@ -76,4 +76,8 @@ println("Value of pi =", PI)
 ## Access
 * Capitalized functions are public (exported)
 * Non-capitalized are private
-* are all const (in caps) public? 
+* are all const (in caps) public?
+
+
+## Slicing
+* Creates a shallow copy
