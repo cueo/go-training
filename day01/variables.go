@@ -5,7 +5,7 @@ import "fmt"
 var x int = 9
 var name string = "momes"
 
-func main()  {
+func main() {
 	fmt.Println(x)
 	// println is a builtin method
 	println("name is " + name)

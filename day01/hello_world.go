@@ -6,10 +6,10 @@ func main() {
 	// comment is like C or Java
 	/*
 	 Multi line comment
-	 */
+	*/
 	print()
 }
 
-func print()  {
+func print() {
 	fmt.Println("Hello, world!")
 }

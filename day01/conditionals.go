@@ -31,11 +31,11 @@ func shortLoop() {
 
 func switchFn() {
 	switch x := 11; {
-		case x%2 == 0:
-			println("x is even")
-		case x%2 != 0:
-			println("x is odd")
-		default:
-			println("i don't know")
+	case x%2 == 0:
+		println("x is even")
+	case x%2 != 0:
+		println("x is odd")
+	default:
+		println("i don't know")
 	}
 }

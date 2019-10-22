@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 type Currency float64
+
 const PI float64 = 3.14
 
 var four = 4
@@ -20,7 +21,7 @@ func types1() {
 	println("Value of pi =", PI)
 
 	var x = 10
-	fmt.Printf("%T\n", x)  // print data type of x
+	fmt.Printf("%T\n", x) // print data type of x
 	println("=====")
 }
 
