@@ -7,6 +7,12 @@ import (
 	"time"
 )
 
+var INR string
+
+
+
+//const PI float64 = 3.14
+
 func main() {
 	word := "helloz"
 	palindrome(word)

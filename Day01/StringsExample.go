@@ -5,6 +5,14 @@ import (
 	"strings"
 )
 
+func Public() {
+
+}
+
+func internal() {
+
+}
+
 func main() {
 	city := "Bangalore"
 	newCity := strings.Replace(city, "a", "A", -1)
