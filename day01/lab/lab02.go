@@ -1,12 +1,15 @@
 package main
 
 import (
+	"math"
 	"math/rand"
+	"strings"
 	"time"
 )
 
 func main() {
-	var input string = "madam"
+	input := "madamz"
+	// var input string
 	// fmt.Scanf("%s", &input)
 	isPalindrome := checkPalindrome(input)
 	if isPalindrome {
@@ -14,7 +17,7 @@ func main() {
 	} else {
 		println("String is NOT palindrome!")
 	}
-	anagram := createAnagram(input)
+	anagram := createAnagram2(input)
 	println("Anagram:", anagram)
 	encodedInput := encode(input)
 	println("Encoded:", encodedInput)
@@ -23,7 +26,7 @@ func main() {
 func checkPalindrome(input string) bool {
 	start, end := 0, len(input)-1
 	for start < end {
-		if input[start] != input[end] {
+		if input[start] != input[end] && math.Abs(float64(input[start]-input[end])) != 32 {
 			return false
 		}
 		start++
@@ -48,4 +51,19 @@ func createAnagram(input string) string {
 		input = input[:r] + countChar + input[r+1:]
 	}
 	return input
+}
+
+func createAnagram2(input string) string {
+	rand.Seed(time.Now().UTC().UnixNano())
+	var anagram string
+	for count := 0; count < len(input); {
+		r := rand.Intn(len(input))
+		if input[r] != '_' {
+			letter := string(input[r])
+			anagram += letter
+			strings.Replace(input, letter, "_", 1)
+			count++
+		}
+	}
+	return anagram
 }
