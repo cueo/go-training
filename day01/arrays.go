@@ -19,4 +19,9 @@ func main() {
 	var arr = make([]int, 10)
 	println(arr)
 	fmt.Println(arr)
+
+	// for each
+	for index, value := range langs {
+		println(index, value)
+	}
 }

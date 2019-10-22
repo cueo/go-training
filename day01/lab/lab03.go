@@ -9,7 +9,7 @@ func main() {
 	sum := part1()
 	println("part 1:", sum)
 
-	arr := []int {10, 19, 21, 39, 309, 431, 643, 942, 1209, 7981, 8888, 9910}
+	arr := []int{10, 19, 21, 39, 309, 431, 643, 942, 1209, 7981, 8888, 9910}
 	// sum = part2Array(arr)
 	m := initializeMap(arr)
 	sum = part2Map(m)
@@ -22,8 +22,13 @@ func main() {
 
 func initializeMap(arr []int) map[int]bool {
 	m := make(map[int]bool)
-	for i := 0; i < len(arr); i++ {
-		m[arr[i]] = true
+	/*
+		for i := 0; i < len(arr); i++ {
+			m[arr[i]] = true
+		}
+	*/
+	for _, value := range arr {
+		m[value] = true
 	}
 	return m
 }
