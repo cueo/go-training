@@ -14,11 +14,18 @@ func main() {
 
 	var advancedGoTraining *Training = &Training{}
 	initTrainingByRef(advancedGoTraining)
+	//cancel(advancedTraining)
+	advancedGoTraining.cancel()
 	fmt.Println(*advancedGoTraining)
 
 	javaTraining := Training{ "Java", "6A"}
 	javaTraining.printDetails()
 
+}
+//func cancel(training *Training){}
+func (training *Training) cancel() {
+	training.name = "CANCELED"
+	training.venue = ""
 }
 
 func (training Training) printDetails() {
