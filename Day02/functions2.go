@@ -9,7 +9,7 @@ func main() {
 	//fmt.Println(divide(12, 0))
 	div, err := divide(12, 0)
 	if err != nil {
-		fmt.Println(err)x
+		fmt.Println(err)
 	} else {
 		fmt.Println(div)
 	}
