@@ -21,7 +21,8 @@ func sum(message string, numbers ...int) (total int) {
 		total += value
 	}
 	return
-	//fmt.Println("cool")
+	fmt.Println("cool")
+	return
 }
 
 
