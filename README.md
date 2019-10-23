@@ -118,3 +118,21 @@ func sum(numbers ...int) (total int) {
 * Functions can be assigned to a variables
 * Function can be passed as a pointer to another function
 * Function can return a pointer to another function
+
+## Pointers
+* No pointer arithmetic
+* Pointers are used to pass by reference (Go is pass by value)
+* Holds the address to the variable
+```go
+x := 10
+var addr *int := &x  // addr := &x
+```
+* Use `new()` to initialize pointers
+```go
+var strAddr *string
+fmt.Println(strAddr)  // <nil>
+// fmt.Println(*strAddr)  // invalid memory address or nil pointer dereference
+
+// noinspection GoVarAndConstTypeMayBeOmitted
+var strAddr2 *string = new(string)  // similar to malloc in C
+``` 
