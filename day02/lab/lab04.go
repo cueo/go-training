@@ -8,7 +8,8 @@ import (
 )
 
 func main() {
-	input := `409  194  207  470  178  454  235  333  511  103  474  293  525  372  408  428
+	input := `
+409  194  207  470  178  454  235  333  511  103  474  293  525  372  408  428
 4321  2786  6683  3921  265  262  6206  2207  5712  214  6750  2742  777  5297
 3536  2675  1298  1069  175  145  706  2614  4067  4377  146  134  1930  3850
 2169  1050  3705  2424  614  3253  222  3287  3340  2637  61  216  2894  247
@@ -24,6 +25,7 @@ func main() {
 }
 
 func calculateChecksum(input string) (checksum int) {
+	input = strings.TrimSpace(input)
 	lines := strings.Split(input, "\n")
 	for _, line := range lines {
 		numStrings := getLine(line)
@@ -35,7 +37,7 @@ func calculateChecksum(input string) (checksum int) {
 }
 
 func getLine(line string) (numStrings []string) {
-	line = strings.Trim(line, " ")
+	line = strings.TrimSpace(line)
 	r := regexp.MustCompile(` +`)
 	numStrings = r.Split(line, -1)
 	return
