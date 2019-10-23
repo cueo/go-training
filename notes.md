@@ -40,6 +40,15 @@
 * if block needs curly braces
 * else or else if block should start inline with if block
 
+###
+
+* Data types
+* Variables, Constants
+* for (range), if-else, switch-case
+* Arrays
+* Slices - make, copy, append
+* Maps - make
+
 
 
 
