@@ -20,14 +20,10 @@ func main() {
 		fmt.Println(key, value)
 	}
 
-
-
-
-
 	//backtick operator
-	comments := `Hi!
+	multiLineString := `Hi!
 			This is a paragraph!
 		Cool! 
 `
-	fmt.Println(comments)
+	fmt.Println(multiLineString)
 }
