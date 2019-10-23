@@ -18,8 +18,6 @@ var input string = `
 3858  202  1141  3458  2507  239  199  4400  3713  3980  4170  227  3968  1688  4352
 4168  209 `
 
-var rows map[int]int = make(map[int]int)
-
 func findMinAndMax(numbers ...int) (min int, max int) {
 	min, max = numbers[0], numbers[0]
 	for _, num := range numbers  {
@@ -32,6 +30,9 @@ func findMinAndMax(numbers ...int) (min int, max int) {
 	}
 	return
 }
+//var twod [][]int = make([][]int, 4)
+
+var rows map[int]int = make(map[int]int)
 
 func main() {
 	parseInput()
