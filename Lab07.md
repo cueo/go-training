@@ -3,6 +3,8 @@
 
 * Implement the following using typedef functions and higher order functions
 
+<br/><br/>
+
 * Create a higher order function called __find__  for the following
 * generate a list of even numbers
 * generate a list of odd numbers
