@@ -136,3 +136,13 @@ fmt.Println(strAddr)  // <nil>
 // noinspection GoVarAndConstTypeMayBeOmitted
 var strAddr2 *string = new(string)  // similar to malloc in C
 ``` 
+
+## `struct`
+```go
+type Cat struct {
+    name string
+    age int
+    cuteness int64
+}
+```
+* `struct` is passed by value
