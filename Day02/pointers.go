@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-//Pointers in arithmetic
+//Pointers arithmetic is not allowed
 
 func change(numbers []int) {
 	numbers[0] = 10000
