@@ -113,3 +113,8 @@ func sum(numbers ...int) (total int) {
     
 }
 ```
+
+## Higher order function
+* Functions can be assigned to a variables
+* Function can be passed as a pointer to another function
+* Function can return a pointer to another function
