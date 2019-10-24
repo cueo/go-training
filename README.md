@@ -146,3 +146,4 @@ type Cat struct {
 }
 ```
 * `struct` is passed by value
+* variables need to be capitalized for it to be visible outside the package (file ?)
