@@ -55,12 +55,17 @@ func myPrintln(a ... interface{}) {
 
 }
 
-//instanceof keyword
+//instanceof keyword in Java
+//interface{} is like a marker interface in Java; no methods at all;
+//example is java.io.Serializable
 func crazy(a interface{}) {
 	switch a.(type) {
 		case int :
 			fmt.Println(a)
 	case Square:
+		//var sq Square = Square(a)
+		var sq Square = a.(Square)
+		fmt.Println(sq.side)
 		fmt.Println(a.(Square).side)
 	case Circle:
 		fmt.Println(a.(Circle).radius)
