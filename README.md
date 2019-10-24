@@ -164,3 +164,6 @@ var s Square = a.(Square)
 ## `defer`
 * Similar to `setTimeout()` in JS
 * Calling a method with `defer` waits for the execution of the enclosing function to complete
+
+## `panic`
+* Used to raise errors
