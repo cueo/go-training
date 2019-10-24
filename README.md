@@ -178,3 +178,10 @@ var s Square = a.(Square)
 * Goroutine
 * Goroutine is a non-system level thread (like in Java) but a application level thread
 * Faster and really lightweight
+
+## `json`
+* Unmarshal
+```go
+var cat Cat
+err := json.Unmarshal(jsonBytes, &cat)
+```
