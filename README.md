@@ -160,3 +160,7 @@ type Cat struct {
 // var s Square = Square(a)
 var s Square = a.(Square)
 ```
+
+## `defer`
+* Similar to `setTimeout()` in JS
+* Calling a method with `defer` waits for the execution of the enclosing function to complete
