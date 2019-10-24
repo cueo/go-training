@@ -147,3 +147,7 @@ type Cat struct {
 ```
 * `struct` is passed by value
 * variables need to be capitalized for it to be visible outside the package (file ?)
+
+## `interface`
+* Interface is an abstraction over type
+* Kind of analogous to generics in Java
