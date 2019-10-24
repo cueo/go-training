@@ -151,3 +151,12 @@ type Cat struct {
 ## `interface`
 * Interface is an abstraction over type
 * Kind of analogous to generics in Java
+* `variable.(type)` similar to `instanceof` in Java or `type()` in Python
+* `interface {}` is like a marker interface in Java (no methods)
+  * eg: `java.io.Serializable`
+* Type casting
+```go
+// a interface{}
+// var s Square = Square(a)
+var s Square = a.(Square)
+```
