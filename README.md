@@ -148,6 +148,10 @@ type Cat struct {
 * `struct` is passed by value
 * variables need to be capitalized for it to be visible outside the package (file ?)
 
+---
+
+# Day 3
+
 ## `interface`
 * Interface is an abstraction over type
 * Kind of analogous to generics in Java
@@ -166,6 +170,11 @@ var s Square = a.(Square)
 * Calling a method with `defer` waits for the execution of the enclosing function to complete
 * Order is LIFO
 
-## `panic`
+## `panic()` and `recover()`
 * Used to raise errors
 * Use `recover()` to handle exceptions
+
+## `go`
+* Goroutine
+* Goroutine is a non-system level thread (like in Java) but a application level thread
+* Faster and really lightweight
