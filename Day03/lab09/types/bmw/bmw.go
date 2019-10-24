@@ -1,32 +1,29 @@
 package bmw
 
 import (
+	"../vehicle"
 	"errors"
-	"fmt"
 	"time"
 )
 
 type bmw struct {
-	model string
-	year uint16
-	seatingCapacity int
-	kind string
+	vehicle.VehicleProperties
 }
 
 func (bmwObj bmw) Model() string{
-	return bmwObj.model
+	return bmwObj.VehicleProperties.Model
 }
 
 func (bmwObj bmw) Year() uint16{
-	return bmwObj.year
+	return bmwObj.VehicleProperties.Year
 }
 
 func (bmwObj bmw) SeatingCapacity() int{
-	return bmwObj.seatingCapacity
+	return bmwObj.VehicleProperties.SeatingCapacity
 }
 
 func (bmwObj bmw) Type() string{
-	return bmwObj.kind
+	return bmwObj.VehicleProperties.Kind
 }
 
 
@@ -35,11 +32,17 @@ func New(year uint16) (bmw, error) {
 		er := errors.New("Year cannot be greater than 2019")
 		return bmw{}, er
 	}
-	return bmw{ model: "BMW", seatingCapacity: 5, kind: "Petrol", year: year }, nil
+
+	return bmw{ vehicle.VehicleProperties{
+		Model:           "BMW",
+		Year:            year,
+		SeatingCapacity: 5,
+		Kind:            "Electric",
+	}}, nil
 }
 
 func (bmwObj bmw) String() string {
-	message := fmt.Sprintf("BMW: (%v), Seating Capacity - %v", bmwObj.year, bmwObj.seatingCapacity)
-	return message
+	//message := fmt.Sprintf("BMW: (%v), Seating Capacity - %v", bmwObj.VehicleProperties.Year, bmwObj.VehicleProperties.SeatingCapacity)
+	return bmwObj.VehicleProperties.String()
 }
 

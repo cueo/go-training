@@ -2,8 +2,6 @@ package main
 
 import (
 	"./lab09/types/bmw"
-	"./lab09/types/ford"
-	"./lab09/types/honda"
 	"./lab09/types/vehicle"
 	"fmt"
 )
